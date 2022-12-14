@@ -1,3 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+*{
+    font-family: 'Unbounded', cursive;
+}
+.flex_around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
