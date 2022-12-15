@@ -1,18 +1,43 @@
-
-@media only screen and (max-width: 900px) {
-    
-    .links{
-        display: none;
-    }
-    .header{
-        position: absolute;
-    }
-    .mobile{
+.Header{
+    padding: 1rem;
+}
+.nav-menu{
+    display: flex;
+}
+.nav-menu li{
+    padding: 0 1rem;
+}
+.nav-menu li a {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+body{
+    background-color: #000;
+}
+.hamburger{
+    display: none;
+}
+@media (max-width: 1040px) {
+    .nav-menu{
+        justify-content: center;
+        flex-direction:column;
+        align-items: center;
         width: 100%;
         height: 100vh;
-        border: 2px solid black;
+        background-color: rgba(0, 0, 0, 0.9);
         position: absolute;
-        background-color: #34495e;
+        top: 0;
+        left: 0;
+        z-index: -3;
     }
-
-  }
+    .nav-menu li{
+        padding: 1rem 0;
+        
+    }
+    .nav-menu li a{
+        font-size: 2rem;
+    }
+    .hamburger{
+        display: initial;
+    }
+}

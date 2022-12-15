@@ -7,7 +7,30 @@
     justify-content: space-around;
     align-items: center
 }
-
+h1,h4,p,a{
+    color: white;
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.btn{
+    padding: 12px 32px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    background-color: #f8d90f;
+    border: 1px solid black;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-light{
+    background: transparent;
+    color: #fff;
+}
+.btn:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
