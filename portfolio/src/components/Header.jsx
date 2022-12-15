@@ -1,15 +1,31 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './styles/global.css'
-import {FaBars} from "react-icons/fa"
+import {FaBars, FaTimes} from "react-icons/fa"
+import { useState } from 'react'
 
 function Header() {
+    const [click,setClick] = useState(false);
+    const [color,setColor] = useState(false);
+    const changeColor = () =>{
+        if(window.screenY >= 100){
+            setColor(true)
+        }
+        else{
+            setColor(false)
+        }
+    }
+
+    window.addEventListener("scroll",changeColor)
+    const Handle = () =>{
+        setClick(!click);
+    }
   return (
-    <div className='Header flex justify-between items-center'>
+    <div className={color ? `Header flex justify-between items-center header-bg`:'Header flex justify-between items-center'} >
             <Link to="/">
                 <h1>Portfolio</h1>
             </Link>
-            <ul className='nav-menu'>   
+            <ul className={click ? "nav-menu active":"nav-menu"}>   
                 <li>
                     <Link to="/" className='text-[#fff]'>Home</Link>
                 </li>
@@ -25,7 +41,14 @@ function Header() {
                 
             </ul>
             <div className="hamburger">
-                <FaBars size={20} style={{color:"#fff",cursor:"pointer"}}/>
+                {click ? (
+                    <FaTimes onClick={()=> setClick(false)} size={20} style={{color:"#fff",cursor:"pointer"}}/>
+                ):(
+                    <FaBars onClick={Handle} size={20} style={{color:"#fff",cursor:"pointer"}}/>
+                )}
+                
+                
+                
             </div>
     </div>
   )
