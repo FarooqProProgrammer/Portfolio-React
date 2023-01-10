@@ -8,6 +8,7 @@ import {
 import { GiHamburgerMenu } from "react-icons/gi";
 
 import { NavLink } from "react-router-dom";
+import { Button } from "antd";
 
 const Navbar = () => {
   const [showMediaIcons, setShowMediaIcons] = useState(false);
@@ -17,8 +18,7 @@ const Navbar = () => {
         {/* 1st logo part  */}
         <div className="logo">
           <h2>
-            <span>T</span>hapa
-            <span>T</span>echnical
+            <span>S</span>hopping
           </h2>
         </div>
 
@@ -32,14 +32,18 @@ const Navbar = () => {
               <NavLink to="/">Home</NavLink>
             </li>
             <li>
-              <NavLink to="/about">about</NavLink>
+              <NavLink to="/About">about</NavLink>
             </li>
             <li>
-              <NavLink to="/service">services</NavLink>
+              <NavLink to="/Service">services</NavLink>
             </li>
             <li>
-              <NavLink to="/contact">contact</NavLink>
+              <NavLink to="/Contact">contact</NavLink>
             </li>
+            <li>
+              <NavLink to="/Product">Product</NavLink>
+            </li>
+            
           </ul>
         </div>
 
@@ -48,21 +52,21 @@ const Navbar = () => {
           <ul className="social-media-desktop">
             <li>
               <a
-                href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+                href="#"
                 target="_thapa">
                 <FaFacebookSquare className="facebook" />
               </a>
             </li>
             <li>
               <a
-                href="https://www.instagram.com/thapatechnical/"
+                href="#"
                 target="_thapa">
                 <FaInstagramSquare className="instagram" />
               </a>
             </li>
             <li>
               <a
-                href="https://www.youtube.com/channel/UCwfaAHy4zQUb2APNOGXUCCA"
+                href="#"
                 target="_thapa">
                 <FaYoutubeSquare className="youtube" />
               </a>
@@ -76,13 +80,9 @@ const Navbar = () => {
             </a>
           </div>
         </div>
+       
       </nav>
 
-      {/* hero section  */}
-      {/* <section className="hero-section">
-        <p>Welcome to </p>
-        <h1>Thapa Technical</h1>
-      </section> */}
     </>
   );
 };

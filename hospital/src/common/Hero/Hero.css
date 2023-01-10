@@ -1,0 +1,8 @@
+@media (max-width:600px) {
+    .left_box{
+        width: 100%;
+    }
+    .right_box {
+        width: 100%;
+    }
+}
